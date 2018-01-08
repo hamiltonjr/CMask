@@ -1,10 +1,22 @@
-// ************************************************
-// *    CMASK  -  Calculating mask in ANSI C      *
-// * This code implements the clculation of mask  *
-// * for the umask UNIX /Linux command.           *
-// * Author: Hamilton Gonçalves Junior            *
-// * Date: 07/01/2018                             *
-// ************************************************
+// *************************************************************
+// *    CMASK  -  Calculating mask in ANSI C                   *
+// * This code implements the clculation of mask for the       *
+// * UNIX /Linux command.                                      *
+// *                                                           *
+// * Author: Hamilton Gonçalves Junior                         *
+// * Date: 07/01/2018                                          *
+// *                                                           *
+// * Umask example usage:                                      *
+// * Umask 	Created Files 		Created Directories    * 
+// * --------------------------------------------------------- *
+// * 000 	666 (rw-rw-rw-) 	777 	(rwxrwxrwx)    *
+// * 002 	664 (rw-rw-r--) 	775 	(rwxrwxr-x)    *
+// * 022 	644 (rw-r--r--) 	755 	(rwxr-xr-x)    *
+// * 027 	640 (rw-r-----) 	750 	(rwxr-x---)    *
+// * 077 	600 (rw-------) 	700 	(rwx------)    *
+// * 277 	400 (r--------) 	500 	(r-x------)    *
+// *                                                           *
+// *************************************************************
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
